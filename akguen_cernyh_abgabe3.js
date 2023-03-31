@@ -7,20 +7,6 @@ var text;
 
 if ( word1.length > word2.length ) {
 	text = 'Das erste Wort ist länger.';
-}
-console.log(text);
-
-
-if ( word1.length > word2.length ) {
-	text = 'Das erste Wort ist länger.';
-} else {
-	text = 'Das zweite Wort ist länger.';
-}
-console.log(text);
-
-
-if ( word1.length > word2.length ) {
-	text = 'Das erste Wort ist länger.';
 } else if ( word1.length = word2.length ) {
 	text = 'Die Wörter sind gleich lang.';
 } else {
@@ -56,7 +42,7 @@ var numList = [3, 4, 9];
 
 //3.2 a)
 function numberIsOdd(num) {
-	return (num % 2) != 0;
+	return num % 2 != 0;
 }
 console.log(numberIsOdd(5));
 
