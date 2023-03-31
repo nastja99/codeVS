@@ -5,13 +5,12 @@ document.write("<h1> Abgabe 4: DOM und Event-Listener von Celine Akgün und Anas
 
 // 4.1 b)	
 document.getElementById("subHeadline");
-
 document.getElementById("subHeadline").style.fontSize = "18px";
 
 
 // 4.1 c)
 document.getElementById("block").firstChild.src == "file://" + pfad + "block.jpg";
-
+console.log(firstChild);
 
 // 4.1 d)
 document.getElementsByTagName("p")[1].innerHTML="Ändere den Text in das Geschriebene.";
@@ -35,8 +34,7 @@ search.addEventListener("keyup" , function () {
 
     container.classList.add("loading");
   }
-
-
+ 
 });
 
 
