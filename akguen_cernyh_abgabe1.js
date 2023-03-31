@@ -18,6 +18,7 @@ students.splice(1, 3);
 document.getElementById("demo3").innerHTML = "Ergebnis Aufgabe c:   " + students;
 
 //1.1d
+students.join();
 document.getElementById("demo4").innerHTML = "Ergebnis Aufgabe d:   " + students.toString();
 
 //1.1e
@@ -33,39 +34,19 @@ var teams = [
  ['Nattapong', 'Giulia', 'Alva']
 ];
 
-document.getElementById("demo6").innerHTML ="Advanced Aufgaben " + "</br></br>" + "Meine Teams:   " + teams;
+document.getElementById("demo6").innerHTML ="Advanced Aufgaben " + "</br></br>" + "Mein Team:   " + teams;
 
 //1.2a
-document.getElementById("demo7").innerHTML = "Ergebnis Aufgabe a:   " + teams[1][4];
+document.getElementById("demo7").innerHTML = "Ergebnis Aufgabe a:   " + teams[1][4][0];
 
+//1.2b 
+teams[2].findIndex((elem) => elem === 'Giulia');	
+teams[2].indexOf('Giulia');
 
-//1.2b Es hat nichts von den folgenden Skripten geklappt.
+document.getElementById("demo8").innerHTML = `Ergebnis Aufgabe b: ${teams[2][1]}`;
 
-let index = teams.indexOf("Giulia");
-document.getElementById("demo8").innerHTML = "Ergebnis Aufgabe b: " + teams;
-
-
-teams.findIndex(checkName);
-
-function checkName(name) {
-  return name = 'Giulia';
-}
-document.getElementById("demo8").innerHTML = "Ergebnis Aufgabe b: " + teams;
-
-
-function findeIndex(tab1, tab2){
-    if(tab1.indexOf('Giulia') != -1)
-    {
-    console.log(tab1,tab2);
-}}
-teams.filter(num =>num.find(findeIndex));
-document.getElementById("demo8").innerHTML = "Ergebnis Aufgabe b: ";
-
-
-
-//1.2c Wir könnten uns vorstellen, dass man den untergeordntenen Arrays Namen zuordnet und dann mit concat verbinden muss.. aber die Vorgehensweise ist etwas problematisch. Eventuell auch noch toString benutzen, aber eigentlich werden die schon alle zusammen angezeigt.
-
-teams.reverse();
+//1.2c 
+teams.map((list) => list.reverse()).flat(2);
 document.getElementById("demo9").innerHTML = "Ergebnis Aufgabe c: " + teams;
 
 
